@@ -13,14 +13,30 @@ class View {
       li.setAttribute("data-location", i);
       ul.appendChild(li);
     }
-
+    this.bindEvents()
   }
   
-  bindEvents() {}
+  bindEvents() {
+    this.el.addEventListener('click', this.handleClick.bind(this))
+  }
 
-  handleClick(e) {}
+  handleClick(event) {
+    let location = event.target.dataset.location
+    // debugger
+    this.makeMove(location)
+    event.target.innerText =this.game.currentPlayer
+  }
+  
+  makeMove(square) {
+    
+    let pos = [Math.floor(square / 3), square % 3]
 
-  makeMove(square) {}
+    this.game.playMove(pos)
+    if (this.game.isOver()) {
+      const body = document.querySelector(body)
+      body.append('<h1> You Won!</h1>')
+    }
+  }
 
 }
 

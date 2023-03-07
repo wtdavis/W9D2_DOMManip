@@ -1,17 +1,21 @@
 ul{
     display: flex;
     flex-wrap: wrap;
-    width: 606px;
+    width: 610px;
 }
 
 li{
     list-style: none;
-    background-color: darkgray;
+    background-color: purple;
+    color: white;
     width: 200px;
     height: 200px;
     border: 1px solid black;
+    font-size: 200px;
+    
 
 }
 li:hover{
-    background-color: rgb(127, 127, 127);
+    background-color: rgb(15, 154, 154);
+    
 }

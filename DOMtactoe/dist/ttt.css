@@ -1,0 +1,17 @@
+ul{
+    display: flex;
+    flex-wrap: wrap;
+    width: 606px;
+}
+
+li{
+    list-style: none;
+    background-color: darkgray;
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+
+}
+li:hover{
+    background-color: rgb(127, 127, 127);
+}
